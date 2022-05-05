@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="208.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxPelirekisteri.MuokkaaPeliaQUIController">
+   <top>
+      <VBox prefHeight="26.0" prefWidth="364.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <SplitPane layoutX="10.0" layoutY="40.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="5.0" prefWidth="377.0" />
+               </items>
+            </SplitPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Muokkaa peliä" wrappingWidth="369.13671875">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <SplitPane orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+              </items>
+            </SplitPane>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="177.0" prefWidth="379.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="364.0">
+               <children>
+                  <VBox prefHeight="26.0" prefWidth="49.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nimi:" wrappingWidth="52.13671875">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="50.0" prefWidth="306.0">
+                     <children>
+                        <TextField fx:id="pelinNimi" prefHeight="25.0" prefWidth="326.0"  text="" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <MenuButton layoutX="10.0" layoutY="94.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="375.0" text="Alusta">
+               <items>
+                  <CheckMenuItem mnemonicParsing="false" text="Steam" />
+                  <CheckMenuItem mnemonicParsing="false" text="Epic Games" />
+                  <CheckMenuItem mnemonicParsing="false" text="Origin" />
+                  <CheckMenuItem mnemonicParsing="false" text="Battle.net" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="kid" mnemonicParsing="false" prefHeight="25.0" prefWidth="379.0" text="Kategoria">
+               <items>
+                  <CheckMenuItem mnemonicParsing="false" text="Kaikki" />
+                  <CheckMenuItem mnemonicParsing="false" text="Fps" />
+                  <CheckMenuItem mnemonicParsing="false" text="Platformer" />
+                  <CheckMenuItem mnemonicParsing="false" text="Battle Royale" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="yid" layoutX="10.0" layoutY="48.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="370.0" text="Vuosi">
+               <items>
+                  <CheckMenuItem mnemonicParsing="false" text="2000-2005" />
+                  <CheckMenuItem mnemonicParsing="false" text="2006-2010" />
+                  <CheckMenuItem mnemonicParsing="false" text="2010->" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="aid" layoutX="10.0" layoutY="140.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="373.0" text="Arvio">
+               <items>
+                  <CheckMenuItem mnemonicParsing="false" text="&lt;50%" />
+                  <CheckMenuItem mnemonicParsing="false" text="50-75%" />
+                  <CheckMenuItem mnemonicParsing="false" text="&gt;75%" />
+               </items>
+            </MenuButton>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="361.0" BorderPane.alignment="CENTER">
+        <buttons>
+            <Button fx:id="buttonMuokkaa" mnemonicParsing="false" onAction="#handleMuokkaaPelia" text="Muokkaa" />
+          <Button fx:id="suljeIkkuna" mnemonicParsing="false" onAction="#handleLopeta"  text="Peru" />
+        </buttons>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </ButtonBar>
+   </bottom>
+</BorderPane>

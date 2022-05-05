@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="109.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxPelirekisteri.PelirekisteriGUIController">
+   <left>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="66.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="54.0">
+               <image>
+                  <Image url="@../../../ohj2/kuvat/Huomio.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+   </left>
+   <center>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Alustaa ei löydy." wrappingWidth="184.9830722808838" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <ButtonBar prefHeight="38.0" prefWidth="316.0" BorderPane.alignment="CENTER">
+        <buttons>
+          <Button contentDisplay="CENTER" minHeight="21.0" mnemonicParsing="false" prefHeight="24.0" text="OK" />
+            <Button cancelButton="true" mnemonicParsing="false" text="Cancel" />
+        </buttons>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="4.0" right="4.0" />
+         </padding>
+      </ButtonBar>
+   </bottom>
+</BorderPane>
